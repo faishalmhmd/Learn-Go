@@ -2,12 +2,12 @@ package main
 
 import "fmt"
 
-func main() {
+// function: this function to return hello + string
+// return: hello + string
+func hello(name string) string {
+		return "Hello " + name 
+}
 
-	// function: this function to return hello + string
-	// return: hello + string
-	hello := func(name string) string {
-		return "hello" + name
-	}
+func main() {
 	fmt.Println(hello("Azizi"))
 }
