@@ -1,16 +1,18 @@
 package main
 
-import "fmt"
-
-
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
+	angka := "11"
 
-	// this function to call anonymous function
-	// return: hello + name
-	hello := func(name string)string {
-		return "Hello " + name
+	nilai, err := strconv.Atoi(angka)
+	if err != nil {
+		fmt.Println("Gagal konversi:", err)
+		return
 	}
-	
-	fmt.Println(hello("Azizi"))
+
+	fmt.Println("Hasil konversi:", nilai)
 }
