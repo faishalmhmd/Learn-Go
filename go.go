@@ -2,22 +2,20 @@ package main
 
 import "fmt"
 
-
 type Profile struct {
 	name string
-	age int
+	age  int
 }
 
-func PrintDataOrang(P Profile) {
-	fmt.Println(P.name)
-	fmt.Println(P.age)
+func printProfile(p Profile) {
+	fmt.Println(p.name)
+	fmt.Println(p.age)
 }
 
 func main() {
-	profile_orang_1 := Profile{
+	person := Profile{
 		name: "Orang Dong",
-		age: 10,
+		age:  10,
 	}
-	PrintDataOrang(profile_orang_1)
-
+	printProfile(person)
 }
