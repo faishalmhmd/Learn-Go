@@ -2,20 +2,15 @@ package main
 
 import "fmt"
 
-type Profile struct {
-	name string
-	age  int
+func do(callback func() int) int {
+	result := callback()
+	return result + 10
 }
 
-func printProfile(p Profile) {
-	fmt.Println(p.name)
-	fmt.Println(p.age)
+func add5() int {
+	return 5
 }
 
 func main() {
-	person := Profile{
-		name: "Orang Dong",
-		age:  10,
-	}
-	printProfile(person)
+	fmt.Println(do(add5))
 }
